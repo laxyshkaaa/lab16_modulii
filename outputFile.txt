@@ -1,0 +1,13 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "hello world hello World world world";    
+
+        String result = str.replaceAll("\\b(\\w+)\\b(\\s+\\1\\b)+", "<strong>$0</strong>"); 
+
+
+        System.out.println(result);
+    }
+}
